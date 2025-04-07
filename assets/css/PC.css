@@ -11,7 +11,7 @@
 :root {
     --background-color: #f7f7f7;
     --color:#161616;
-    --theme-color: #ff5050;/**主题色**/
+    --theme-color: #000000;/**主题色**/
     --theme-color-light: color-mix(in srgb, var(--theme-color) 70%, white 30%);/**主题色浅色**/
     --black: #121212;/**黑标题色**/
     --black-light: #161616;/**摘要\文章数据\评论者信息色**/
@@ -21,7 +21,7 @@
     --line-grey:#ededed;
     --white: #ffffff;/**白标题色**/
     --bg-white: #ffffff;
-    --red: #dd1111; /**点赞色**/
+    --red: #000000; /**点赞色**/
     --blue: #0b80ff;/**a链接选中色**/
     --blue-light: #467ab3;/**a链接色**/
 }

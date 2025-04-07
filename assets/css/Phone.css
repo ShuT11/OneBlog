@@ -10,7 +10,7 @@
 /**默认主题配色**/
 :root {
     --color:#161616;
-    --theme-color: #ff5050;/**主题色**/
+    --theme-color: #000000;/**主题色**/
     --theme-color-light: color-mix(in srgb, var(--theme-color) 70%, white 30%);/**主题色浅色**/
     --black: #121212;/**黑标题色**/
     --black-light: #161616;/**摘要\文章数据\评论者信息色**/
@@ -20,7 +20,7 @@
     --line-grey:#f3f3f3;
     --white: #ffffff;/**白标题色**/
     --bg-white: #ffffff;
-    --red: #dd1111; /**点赞色**/
+    --red: #000000; /**点赞色**/
     --blue: #0b80ff;/**a链接选中色**/
     --blue-light: #467ab3;/**a链接色**/
 }
@@ -1963,7 +1963,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    color: red;
+    color: rgb(0, 0, 0);
     text-align: center;
     z-index: 9999;
 }
