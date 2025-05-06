@@ -497,7 +497,7 @@ function dengji($i){
 function getGravatar($email, $s = 96, $d = 'mp', $r = 'g', $img = false, $atts = array()){
     preg_match_all('/((\d)*)@qq.com/', $email, $vai);
     if (empty($vai['1']['0'])) {
-        $url = 'https://cravatar.cn/avatar/';
+        $url = 'https://weavatar.com/avatar/';
         $url .= md5(strtolower(trim($email)));
         $url .= "?s=$s&d=$d&r=$r";
         if ($img) {
