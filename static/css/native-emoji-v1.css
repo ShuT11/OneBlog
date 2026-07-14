@@ -1,0 +1,51 @@
+/**
+ * OneBlog native Emoji picker.
+ * Emoji glyphs are rendered by the visitor's operating system.
+ */
+.emoji-container .native-emoji-option,
+.emoji-container .native-kaomoji-option {
+    -webkit-appearance: none;
+    appearance: none;
+    align-items: center;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: var(--color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.emoji-container .native-emoji-option {
+    flex: 0 0 38px;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+    font-size: 24px;
+    height: 38px;
+    line-height: 1;
+    margin: 2px;
+    width: 38px;
+}
+
+.emoji-container .native-kaomoji-option {
+    flex: 0 0 80px;
+    font-family: var(--oneblog-font-family);
+    font-size: 14px;
+    height: 40px;
+    line-height: 1.4;
+    margin: 3px;
+    padding: 4px;
+    width: 80px;
+}
+
+.emoji-container .native-emoji-option:hover,
+.emoji-container .native-kaomoji-option:hover {
+    background: var(--line);
+}
+
+.emoji-container .native-emoji-option:focus-visible,
+.emoji-container .native-kaomoji-option:focus-visible {
+    border-color: var(--theme-color);
+    outline: 2px solid var(--theme-color);
+    outline-offset: 1px;
+}

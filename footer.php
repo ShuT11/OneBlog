@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <?php endif;?>
 
 <!--表情支持-->
-<script src="<?php $this->options->themeUrl('/static/js/emoji.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/static/js/emoji-native-v1.js?v=2'); ?>"></script>
 
 <?php if ($this->options->GeetestID): ?>
 <!--人机验证-->

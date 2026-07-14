@@ -41,9 +41,9 @@ $this->widget('Album_Widget_Photo@photoList', 'page=' . $currentPage)->to($photo
         <div class="photos" id="photos">
             <?php for ($photos->rewind(); $photos->valid(); $photos->next()): ?>
             <div class="photo image-shadow">
-                <a href="<?= $photos->rawUrl ?>" data-fancybox="gallery" 
-                   data-caption="<?= $photos->title ?>&nbsp;&nbsp;&nbsp;&nbsp;<?= $photos->caption ?>&nbsp;&nbsp;&nbsp;&nbsp;<?= date('M d, Y', $photos->date) ?>">
-                    <img class="lazy-load" data-src="<?= $photos->url ?>" />
+                <a href="<?php echo htmlspecialchars((string)$photos->rawUrl, ENT_QUOTES, 'UTF-8'); ?>" data-fancybox="gallery"
+                   data-caption="<?php echo htmlspecialchars(trim((string)$photos->title . '    ' . (string)$photos->caption . '    ' . date('M d, Y', (int)$photos->date)), ENT_QUOTES, 'UTF-8'); ?>">
+                    <img class="lazy-load" data-src="<?php echo htmlspecialchars((string)$photos->url, ENT_QUOTES, 'UTF-8'); ?>" />
                 </a>
             </div>
             <?php endfor; ?>

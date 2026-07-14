@@ -645,6 +645,7 @@ $(function () {
     const $publishBtn = $('#publish-button');
     if (!$publishBtn.length) return;
 
+    const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '';
     const uploadUrl = cfg.memosUploadUrl || '/action/memos-upload';
     const signUrl = cfg.memosSignUrl || '/action/memos-sign';
     const useCos = !!cfg.memosUseCos;
@@ -714,7 +715,6 @@ $(function () {
     }
 
     $publishBtn.on('click', function () {
-        const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '';
         const commentUrl = document.querySelector('meta[name="comment-url"]')?.getAttribute('content') || '';
 
         if (!commentUrl) {
@@ -821,6 +821,7 @@ $(function () {
             if (useCos) {
                 const signForm = new FormData();
                 signForm.append('fileName', fileItem.file.name);
+                signForm.append('_', csrfToken);
 
                 $.ajax({
                     url: signUrl,
@@ -875,6 +876,7 @@ $(function () {
             // 本地上传
             const formData = new FormData();
             formData.append('file', fileItem.file);
+            formData.append('_', csrfToken);
 
             $.ajax({
                 url: uploadUrl,
