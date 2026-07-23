@@ -69,7 +69,7 @@ OneBlog，一个博客，再无其他。本主题基于Typecho，设计初衷是
 
 ```
 v3.7.2 版本更新
-1.替换SDK的CDN源为Bootcdn，并将样式CSS本地化；
+1.所有SDK本地化；
 2.适配森木志开发的 typecho 海报插件 TEPoster。
 
 v3.7.1 版本更新

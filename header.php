@@ -4,7 +4,6 @@
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width"/>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="dns-prefetch" href="https://at.alicdn.com">
-<link rel="dns-prefetch" href="https://cdn.bootcdn.net/">
 <link rel="dns-prefetch" href="https://weavatar.com">
 <?php if (!empty($this->options->dnsPrefetch)):
 $domains = array_filter(array_map('trim', explode("\n", $this->options->dnsPrefetch)));
@@ -33,12 +32,12 @@ foreach ($domains as $domain): ?>
 <?php endif; ?>
 <?php endif; ?>
 </title>
-<link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.compat.css" rel="stylesheet"><!--动画效果-->
+<link href="<?php $this->options->themeUrl('/static/sdk/animate/4.1.1/animate.min.css'); ?>" rel="stylesheet"><!--动画效果-->
 <link href="//at.alicdn.com/t/c/font_3940454_mjpc1qk906o.css" rel="stylesheet"/><!---图标库 iconfont.cn -->
 <?php if ($this->is('index')):?>
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" /><!--轮播图-->
+<link rel="stylesheet" href="<?php $this->options->themeUrl('/static/sdk/swiper/8.3.2/swiper-bundle.min.css'); ?>" /><!--轮播图-->
 <?php endif;?>
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" /><!--灯箱效果-->
+<link rel="stylesheet" href="<?php $this->options->themeUrl('/static/sdk/fancybox/3.5.7/jquery.fancybox.min.css'); ?>" /><!--灯箱效果-->
 <link href="<?php $this->options->themeUrl('/static/css/main.css?v=3.7.2'); ?>" rel="stylesheet"/><!--主题核心样式-->
 <link href="<?php $this->options->themeUrl('/static/css/m.css?v=3.7.2'); ?>" rel="stylesheet"/><!--主题核心样式-->
 <?php $oneblogFont = oneblogFontSet(); ?>

@@ -41,11 +41,11 @@
 
 
 <?php $this->footer();?>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!--基础依赖放在最前面-->
-<script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script><!--图片灯箱效果-->
-<script src="https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/layer.min.js"></script>
+<script src="<?php $this->options->themeUrl('/static/sdk/jquery/3.7.1/jquery.min.js'); ?>"></script><!--基础依赖放在最前面-->
+<script src="<?php $this->options->themeUrl('/static/sdk/fancybox/3.5.7/jquery.fancybox.min.js'); ?>"></script><!--图片灯箱效果-->
+<script src="<?php $this->options->themeUrl('/static/sdk/layer/3.1.1/layer.js'); ?>"></script>
 <?php if ($this->is('index')):?>
-<script src="https://cdn.bootcdn.net/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
+<script src="<?php $this->options->themeUrl('/static/sdk/swiper/8.3.2/swiper-bundle.min.js'); ?>"></script>
 <script>
 var bannerSwitch = '<?= $this->options->switch === 'on' ? 'on' : 'off' ?>';
 </script>
@@ -53,7 +53,7 @@ var bannerSwitch = '<?= $this->options->switch === 'on' ? 'on' : 'off' ?>';
 <?php if ($this->is('post') || $this->is('page')): ?>
 <?php if ($this->options->BeCode == 'on'):?>
 <!--代码高亮逻辑-->
-<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.11.1/es/highlight.min.js"></script>
+<script src="<?php $this->options->themeUrl('/static/sdk/highlightjs/11.11.1/highlight.min.js'); ?>"></script>
 <script defer>
 document.addEventListener('DOMContentLoaded', function () {
     const codeBlocks = document.querySelectorAll('pre code');

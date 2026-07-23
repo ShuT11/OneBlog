@@ -86,7 +86,7 @@ $this->need('header.php'); ?>
     <?php $this->need('comments.php'); ?>
 </div>
 <!--文章悬浮操作-->
-<div id="post-actions" class="post-actions hidden pc">
+<div id="post-actions" class="post-actions<?php echo $tePosterEnabled ? ' has-teposter' : ''; ?> hidden pc">
     <?php if ($tePosterEnabled): ?>
         <?php TEPoster_Plugin::insertButton(); ?>
     <?php endif; ?>

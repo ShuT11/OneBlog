@@ -763,6 +763,11 @@ a.post {
     display: block;
 }
 
+/* 海报组比单个返回顶部按钮高，触底时将整组底边贴齐文章底部。 */
+.post-actions.has-teposter.newtotop {
+    bottom: 80px !important;
+}
+
 .post-actions.hidden {
     display: none;
 }
