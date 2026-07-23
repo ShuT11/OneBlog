@@ -576,14 +576,14 @@ function themeConfig($form) {
     $themeConfStr = $db->fetchRow($db->select()->from('table.options')->where('name = ?', 'theme:' . $theTheme))['value'];
     $backstr = is_readable($backPath) ? @file_get_contents($backPath) : '';?>
 
-    <link rel="stylesheet" href="https://cncdn.cc/oneblog/3.7.0/admin.css" type="text/css" />
-    <script src="https://cncdn.cc/jquery/3.7.1/dist/jquery.min.js" type="text/javascript"></script>
-    <script src="https://cncdn.cc/layer/3.1.1/layer.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/static/css/admin.css'); ?>" type="text/css" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/layer.min.js" type="text/javascript"></script>
     <script>
     window.oneblogFontConfigs = <?php echo json_encode(oneblogFonts(), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?>;
     window.oneblogAdminToken = <?php echo json_encode(Helper::security()->getToken(Typecho_Request::getInstance()->getRequestUrl())); ?>;
     </script>
-    <script src="<?php echo Helper::options()->themeUrl('static/js/admin.js'); ?>" type="text/javascript"></script>
+    <script src="<?php $this->options->themeUrl('/static/js/admin.js'); ?>" type="text/javascript"></script>
     <div class="OneBlog"><h3>OneBlog 主题设置</h3></div>
     <div id="tab-container">
         <ul id="tab-nav"></ul>
@@ -750,8 +750,8 @@ function themeConfig($form) {
 
 //文章自定义字段
 function themeFields($layout) { ?>
-    <link rel="stylesheet" href="https://cncdn.cc/oneblog/3.7.0/admin.css" type="text/css" />
-    <?php 
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/static/css/admin.css'); ?>" type="text/css" />
+    <?php
     $thumb = new Typecho_Widget_Helper_Form_Element_Text('thumb', NULL, NULL, _t('封面图片'), _t('此处填写后会让文章/独立页面详情样式显示为有封面图的样式效果，文章列表也会出现封面缩略图，搜索引擎抓取的也是该封面图。'));
  	$thumb->input->setAttribute('class', 'full-width-input');
     $layout->addItem($thumb); 

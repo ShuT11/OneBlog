@@ -4,8 +4,8 @@
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width"/>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="dns-prefetch" href="https://at.alicdn.com">
+<link rel="dns-prefetch" href="https://cdn.bootcdn.net/">
 <link rel="dns-prefetch" href="https://weavatar.com">
-<link rel="dns-prefetch" href="https://cncdn.cc">
 <?php if (!empty($this->options->dnsPrefetch)):
 $domains = array_filter(array_map('trim', explode("\n", $this->options->dnsPrefetch)));
 foreach ($domains as $domain): ?>
@@ -33,14 +33,14 @@ foreach ($domains as $domain): ?>
 <?php endif; ?>
 <?php endif; ?>
 </title>
-<link href="https://cncdn.cc/animate.css/4.1.1/animate.min.css" rel="stylesheet"><!--动画效果-->
+<link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.compat.css" rel="stylesheet"><!--动画效果-->
 <link href="//at.alicdn.com/t/c/font_3940454_lp08yxn46sl.css" rel="stylesheet"/><!---图标库 iconfont.cn -->
 <?php if ($this->is('index')):?>
-<link rel="stylesheet" href="https://cncdn.cc/swiper/8.3.2/swiper-bundle.min.css" /><!--轮播图-->
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" /><!--轮播图-->
 <?php endif;?>
-<link rel="stylesheet" href="https://cncdn.cc/@fancyapps/fancybox/3.5.7/dist/jquery.fancybox.min.css" /><!--灯箱效果-->
-<link href="https://cncdn.cc/oneblog/3.7.0/main.css" rel="stylesheet"/><!--主题核心样式-->
-<link href="https://cncdn.cc/oneblog/3.7.0/m.css" rel="stylesheet"/><!--主题核心样式-->
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" /><!--灯箱效果-->
+<link href="<?php $this->options->themeUrl('/static/css/main.css?v=3.7.2'); ?>" rel="stylesheet"/><!--主题核心样式-->
+<link href="<?php $this->options->themeUrl('/static/css/m.css?v=3.7.2'); ?>" rel="stylesheet"/><!--主题核心样式-->
 <?php $oneblogFont = oneblogFontSet(); ?>
 <?php if (!empty($oneblogFont['css'])): ?>
 <link rel="stylesheet" href="<?php echo htmlspecialchars($oneblogFont['css'], ENT_QUOTES, 'UTF-8'); ?>" />
