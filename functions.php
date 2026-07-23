@@ -750,7 +750,7 @@ function themeConfig($form) {
 
 //文章自定义字段
 function themeFields($layout) { ?>
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/static/css/admin.css'); ?>" type="text/css" />
+    <link rel="stylesheet" href="<?php echo Helper::options()->themeUrl('static/css/admin.css'); ?>" type="text/css" />
     <?php
     $thumb = new Typecho_Widget_Helper_Form_Element_Text('thumb', NULL, NULL, _t('封面图片'), _t('此处填写后会让文章/独立页面详情样式显示为有封面图的样式效果，文章列表也会出现封面缩略图，搜索引擎抓取的也是该封面图。'));
  	$thumb->input->setAttribute('class', 'full-width-input');
