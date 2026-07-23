@@ -576,14 +576,14 @@ function themeConfig($form) {
     $themeConfStr = $db->fetchRow($db->select()->from('table.options')->where('name = ?', 'theme:' . $theTheme))['value'];
     $backstr = is_readable($backPath) ? @file_get_contents($backPath) : '';?>
 
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('/static/css/admin.css'); ?>" type="text/css" />
+    <link rel="stylesheet" href="<?php echo Helper::options()->themeUrl('static/css/admin.css'); ?>" type="text/css" />
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/layer.min.js" type="text/javascript"></script>
     <script>
     window.oneblogFontConfigs = <?php echo json_encode(oneblogFonts(), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?>;
     window.oneblogAdminToken = <?php echo json_encode(Helper::security()->getToken(Typecho_Request::getInstance()->getRequestUrl())); ?>;
     </script>
-    <script src="<?php $this->options->themeUrl('/static/js/admin.js'); ?>" type="text/javascript"></script>
+    <script src="<?php echo Helper::options()->themeUrl('static/js/admin.js'); ?>" type="text/javascript"></script>
     <div class="OneBlog"><h3>OneBlog 主题设置</h3></div>
     <div id="tab-container">
         <ul id="tab-nav"></ul>
