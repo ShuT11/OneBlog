@@ -1,5 +1,11 @@
 <?php
+/**
+ * 文章详情页：渲染正文、评论，并在 TEPoster 启用时提供海报入口。
+ */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+$oneblogPlugins = Typecho_Plugin::export();
+$tePosterEnabled = isset($oneblogPlugins['activated']['TEPoster'])
+    && is_callable(['TEPoster_Plugin', 'insertButton']);
 $this->need('header.php'); ?>
 
 <div class="main">
@@ -78,15 +84,12 @@ $this->need('header.php'); ?>
     </div> 
     <!--通用文章评论-->
     <?php $this->need('comments.php'); ?>
-
-
-
 </div>
-<!--返回顶部-->
-<a id="gototop" class="hidden pc"><i class="iconfont icon-up"></i></a>
-    
-
-
-
+<!--文章悬浮操作-->
+<div id="post-actions" class="post-actions hidden pc">
+    <?php if ($tePosterEnabled): ?>
+        <?php TEPoster_Plugin::insertButton(); ?>
+    <?php endif; ?>
+    <a id="gototop" title="返回顶部" aria-label="返回顶部"><i class="iconfont icon-up" aria-hidden="true"></i></a>
+</div>
 <?php $this->need('footer.php'); ?>
-

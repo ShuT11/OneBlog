@@ -726,20 +726,45 @@ a.post {
     color: var(--grey);
 }
 
-/**返回顶部**/
-#gototop {
+/**文章悬浮操作**/
+#gototop,
+.post-actions {
     position: fixed;
     right: calc(((100% - 800px)/2) - 50px);
     bottom: 12px;
     z-index: 999;
 }
 
-#gototop i {
-    padding: 10px;
+#gototop i,
+.post-actions #teposter-generate {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
     border-radius: 3px;
     cursor: pointer;
     box-shadow: var(--grey) 1px inset;
     background: var(--white);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1;
+}
+
+.post-actions .teposter-button-wrap {
+    margin: 0 0 8px;
+}
+
+.post-actions #gototop {
+    position: static;
+    display: block;
+}
+
+.post-actions.hidden {
+    display: none;
 }
 
 .hidden {
