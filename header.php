@@ -34,7 +34,7 @@ foreach ($domains as $domain): ?>
 <?php endif; ?>
 </title>
 <link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.compat.css" rel="stylesheet"><!--动画效果-->
-<link href="//at.alicdn.com/t/c/font_3940454_lp08yxn46sl.css" rel="stylesheet"/><!---图标库 iconfont.cn -->
+<link href="//at.alicdn.com/t/c/font_3940454_mjpc1qk906o.css" rel="stylesheet"/><!---图标库 iconfont.cn -->
 <?php if ($this->is('index')):?>
 <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" /><!--轮播图-->
 <?php endif;?>
