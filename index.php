@@ -2,13 +2,13 @@
 /**
  *
  * 一款简约文艺的文字博客主题，主题事宜请先仔细查阅官方文档，无法解决的优先提issue或在<a href="https://litebbs.com/">轻论坛</a>搜索教程、寻求帮助，论坛邀请码可以找群主获取，QQ交流群：939170079。
- * 文档：<a href="https://oneblog.023.me">oneblog.023.me</a>
- * 论坛：<a href="https://litebbs.com/">litebbs.com</a>
- * 主题效果：<a href="https://023.me">023.me</a>
+ * 文档：<a href="https://oneblog.023.me">oneblog主题文档</a>
+ * 合作论坛：<a href="https://litebbs.com/">轻论坛</a>
+ * 官网效果：<a href="https://023.me">彼岸临窗</a>
  * 
  * @package OneBlog
  * @author 彼岸临窗
- * @version 3.7.1
+ * @version 3.7.2
  * @link https://023.me
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;

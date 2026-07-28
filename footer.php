@@ -41,11 +41,11 @@
 
 
 <?php $this->footer();?>
-<script src="https://cncdn.cc/jquery/3.7.1/dist/jquery.min.js"></script><!--基础依赖放在最前面-->
-<script src="https://cncdn.cc/@fancyapps/fancybox/3.5.7/dist/jquery.fancybox.min.js"></script><!--图片灯箱效果-->
-<script src="https://cncdn.cc/layer/3.1.1/layer.js"></script>
+<script src="<?php $this->options->themeUrl('/static/sdk/jquery/3.7.1/jquery.min.js'); ?>"></script><!--基础依赖放在最前面-->
+<script src="<?php $this->options->themeUrl('/static/sdk/fancybox/3.5.7/jquery.fancybox.min.js'); ?>"></script><!--图片灯箱效果-->
+<script src="<?php $this->options->themeUrl('/static/sdk/layer/3.1.1/layer.js'); ?>"></script>
 <?php if ($this->is('index')):?>
-<script src="https://cncdn.cc/swiper/8.3.2/swiper-bundle.min.js"></script>
+<script src="<?php $this->options->themeUrl('/static/sdk/swiper/8.3.2/swiper-bundle.min.js'); ?>"></script>
 <script>
 var bannerSwitch = '<?= $this->options->switch === 'on' ? 'on' : 'off' ?>';
 </script>
@@ -53,7 +53,7 @@ var bannerSwitch = '<?= $this->options->switch === 'on' ? 'on' : 'off' ?>';
 <?php if ($this->is('post') || $this->is('page')): ?>
 <?php if ($this->options->BeCode == 'on'):?>
 <!--代码高亮逻辑-->
-<script src="https://cncdn.cc/highlightjs/cdn-release/11.11.1/build/highlight.min.js"></script>
+<script src="<?php $this->options->themeUrl('/static/sdk/highlightjs/11.11.1/highlight.min.js'); ?>"></script>
 <script defer>
 document.addEventListener('DOMContentLoaded', function () {
     const codeBlocks = document.querySelectorAll('pre code');
@@ -94,10 +94,10 @@ document.addEventListener('DOMContentLoaded', function () {
 <script src="https://static.geetest.com/v4/gt4.js"></script>
 <?php endif;?>
 <!--评论无限加载js-->
-<script src="<?php $this->options->themeUrl('/static/js/comments.js?v=3.7.1'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/static/js/comments.js?v=3.7.2'); ?>"></script>
 <?php endif;?>
 
-<script src="<?php $this->options->themeUrl('/static/js/main.js?v=3.7.1'); ?>"></script><!--主题js-->
+<script src="<?php $this->options->themeUrl('/static/js/main.js?v=3.7.2'); ?>"></script><!--主题js-->
 
 <!-- 版权信息 -->
 <div id="copyright-info" style="display: none;">

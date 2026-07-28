@@ -444,9 +444,20 @@ jQuery(document).ready(function($) {
 
 /*返回顶部,按钮在页面最底部固定浮动*/
 $(document).ready(function(){
+    var $posterButton = $('#teposter-generate');
+    if ($posterButton.length) {
+        $posterButton
+            .empty()
+            .append('<i class="iconfont icon-poster" aria-hidden="true"></i>')
+            .attr({title: '生成海报', 'aria-label': '生成海报'});
+    }
+
     // 判断是否为移动端（屏幕宽度 < 768px）
     var isMobile = window.innerWidth < 768;
     if (isMobile) return; // 移动端不执行返回顶部逻辑
+
+    var $scrollActions = $('#post-actions');
+    if (!$scrollActions.length) $scrollActions = $('#gototop');
     
     $(window).scroll(function(){
         var scroTop = $(window).scrollTop();
@@ -454,16 +465,16 @@ $(document).ready(function(){
         var minAwayBtm = 270;
 
         if(scroTop > 400){
-            $('#gototop').fadeIn(500);
-            $('#gototop').removeClass('hidden');
+            $scrollActions.fadeIn(500);
+            $scrollActions.removeClass('hidden');
         } else {
-            $('#gototop').fadeOut(500);
+            $scrollActions.fadeOut(500);
         }
 
         if (awayBtm <= minAwayBtm){
-            $('#gototop').addClass('newtotop');
+            $scrollActions.addClass('newtotop');
         } else {
-            $('#gototop').removeClass('newtotop');
+            $scrollActions.removeClass('newtotop');
         }
     });
 
@@ -1226,7 +1237,7 @@ window.addEventListener('load', function() {
 
 /**开源不易，请尊重作者的版权，保留本信息**/
 function showConsoleInfo() {
-    const version = '3.7.1';
+    const version = '3.7.2';
     const copyright = '自豪地使用OneBlog主题';
     console.log('\n' + ' %c 当前版本：' + version + '  ' + copyright + '  %c https://023.me  ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
     console.log('开源不易，请尊重作者版权，保留基本的版权信息。');
